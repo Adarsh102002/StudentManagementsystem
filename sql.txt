@@ -1,0 +1,31 @@
+CREATE DATABASE studentdata;
+
+USE studentdata;
+
+CREATE TABLE studentdatamgmt (
+  FirstName VARCHAR(50),
+  Surname VARCHAR(50),
+  Age INT,
+  DateOfBirth INT,
+  Gender CHAR,
+  contactNo INT,
+  YearOfJoin INT,
+  Id INT NOT NULL AUTO_INCREMENT,
+  Department VARCHAR(2),
+  class VARCHAR(50),
+  FatherName VARCHAR(20),
+  MotherName VARCHAR(20),
+  PRIMARY KEY (Id)
+);
+
+CREATE TABLE login (
+  username VARCHAR(100) PRIMARY KEY,
+  pass VARCHAR(20)
+);
+
+INSERT INTO studentdatamgmt VALUES ('Roshni', 'Gupta', 19, 7082002, 'F', 100000000, 2020, 101, 'CS', 'Second Year', 'Umesh Gupta', 'Archana Gupta');
+INSERT INTO studentdatamgmt VALUES ('Alex', 'Gupta', 19, 9082002, 'M', 30000000, 2020, 103, 'CS', 'Second Year', 'Abcd', 'Efgh');
+INSERT INTO studentdatamgmt VALUES ('Elle', 'Gupta', 19, 5082002, 'F', 400000000, 2020, 104, 'IT', 'First Year', 'Nix', 'Helen');
+INSERT INTO studentdatamgmt VALUES ('Roshni', 'Gupta', 19, 3082002, 'F', 500000000, 2020, 105, 'IT', 'First Year', 'Zooba', 'Kia');
+
+INSERT INTO login VALUES ('roshni@123', 'roshni');
